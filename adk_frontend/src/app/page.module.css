@@ -1,0 +1,437 @@
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+  min-height: 100vh;
+  font-family: var(--font-geist-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+  }
+}
+
+/* Header Section */
+.header {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.headerContent {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  background: linear-gradient(45deg, #ffffff, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.ctaButton {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Cards Section */
+.cardsSection {
+  padding: 4rem 2rem;
+  background-color: #f8fafc;
+}
+
+@media (prefers-color-scheme: dark) {
+  .cardsSection {
+    background-color: #1a1a1a;
+  }
+}
+
+.cardsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: #ccc solid;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .header {
+    padding: 0 1rem;
+  }
+  
+  .cardsSection {
+    padding: 3rem 1rem;
+  }
+  
+  .cardsContainer {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+  
+  .helpContainer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .helpContent {
+    order: 2;
+  }
+  
+  .helpImage {
+    order: 1;
+  }
+  
+  .helpTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .ctaButton {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .helpTitle {
+    font-size: 1.5rem;
+  }
+  
+  .helpSection {
+    padding: 3rem 1rem;
+  }
+}
+
+/* How Codecraft.ai Helps Section */
+.helpSection {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .helpSection {
+    background-color: #0a0a0a;
+  }
+}
+
+.helpContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.helpContent {
+  flex: 1;
+  max-width: 600px;
+}
+
+.helpTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+@media (prefers-color-scheme: dark) {
+  .helpTitle {
+    color: #ffffff;
+  }
+}
+
+.helpText {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4a5568;
+}
+
+@media (prefers-color-scheme: dark) {
+  .helpText {
+    color: #e2e8f0;
+  }
+}
+
+.helpText p {
+  margin-bottom: 1.5rem;
+}
+
+.helpText p:last-child {
+  margin-bottom: 0;
+}
+
+.helpImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  .modal {
+    background: #1a1a1a;
+    color: white;
+    border: 1px solid #333;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modalHeader h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.closeButton:hover {
+  color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  .closeButton {
+    color: #999;
+  }
+  
+  .closeButton:hover {
+    color: #ccc;
+  }
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 500;
+  color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  .formGroup label {
+    color: #ccc;
+  }
+}
+
+.input {
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  background: white;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .input {
+    background: #2a2a2a;
+    border-color: #444;
+    color: white;
+  }
+  
+  .input:focus {
+    border-color: #667eea;
+  }
+}
+
+.modalActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.cancelButton {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e1e5e9;
+  background: white;
+  color: #666;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancelButton:hover {
+  background: #f8f9fa;
+  border-color: #ccc;
+}
+
+@media (prefers-color-scheme: dark) {
+  .cancelButton {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #ccc;
+  }
+  
+  .cancelButton:hover {
+    background: #333;
+    border-color: #555;
+  }
+}
+
+.submitButton {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}

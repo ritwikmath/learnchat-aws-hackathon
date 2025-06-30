@@ -1,0 +1,8 @@
+.chatPage {
+    display: flex;
+    height: 100vh;
+    background-color: #343541;
+    color: #ECECF1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
