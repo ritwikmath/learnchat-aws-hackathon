@@ -78,17 +78,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How Codecraft.ai Helps Section */}
+      {/* How CodeBuddy Helps Section */}
       <section className={styles.helpSection}>
         <div className={styles.helpContainer}>
           <div className={styles.helpContent}>
             <h2 className={styles.helpTitle}>
-              How Codecraft.ai Helps You
+              How CodeBuddy Helps You
             </h2>
             <div className={styles.helpText}>
               <p>
                 {
-                  `Codecraft.ai revolutionizes your development workflow by automating the most time-consuming aspects of software development. 
+                  `CodeBuddy revolutionizes your development workflow by automating the most time-consuming aspects of software development. 
                 Our AI-powered platform saves you hours of manual work by generating comprehensive unit tests and detailed documentation 
                 for your Python code.`
                 }
